@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade média</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        *{
+            margin: 0px;
+           padding : 0px;
+        }
+        header {
+           
+        }
+        header h1 {
+            text-align: center;
+            padding-top: 10px;
+            color: #8f8f0b;
+            font-size: 3em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+            font-family: 'Bebas Neue';
+    
+        }
+        ul > li {
+            display: inline;
+            padding: 10px;
+            margin-left: 10px;
+            color: #8f8f0b;
+        }
+        ul > li > a{
+            text-decoration: none;
+            color: #8f8f0b;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+            transition-duration: 0.3s;
+
+        }
+        ul > li > a:hover{
+            background-color: #ecec1b00;
+            color: white;
+            text-shadow: none;
+        }
+        body {
+            background-image: url('imagens/imgestrada.jpg');
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            color: rgb(104, 104, 104);
+            font-weight: bold;
+        }
+        .box {
+           text-align: center;
+           margin-top: 180px;
+           display:block
+          
+            
+        }
+        input{
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            
+        }
+       div#res{
+        padding-top: 10px;
+       }
+       input#botao:hover{
+        background-color: #8f8f0b;
+        color: white;
+
+       }
+       input#botao{
+        transition-duration: 0.3s;
+       }
+       
+       
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Velocidade Média</h1>
+      <ul>
+        <li><a href="#">Social</a></li>
+        <li><a href="#">Curiosidades</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </header>
+    <div class="box">
+        <main>
+          Distância: <input type="number" name="dist" id="dist" placeholder="distância em km"> 
+           Tempo: <input class="tempo" type="number" name="time" id="time" placeholder="tempo em hora"> 
+            <input id="botao" type="button" value="Calcular" onclick="calcular ()">
+            <div id="res"></div>
+        </main>
+    </div>
+       
+    <script>
+        function calcular() {
+              var d = Number.parseFloat(window.document.getElementById('dist').value) 
+              var t = Number.parseFloat(window.document.getElementById('time').value) 
+              var v = d/t
+              var res = window.document.getElementById('res')
+              res.innerHTML = `A velocidade média percorrida no trajeto foi de <strong>${v}km/h</strong>`
+              
+
+        }
+
+
+
+    </script>
+          
+
+    
+</body>
+</html>
